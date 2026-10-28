@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Night at the Museum</title><link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/p5@2.3.3/lib/p5.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/p5.sound@0.4.1/dist/p5.sound.min.js"></script>
+<script src="https://unpkg.com/ml5@1/dist/ml5.min.js"></script></head>
+<body><header><h1>Night at the Museum</h1><p>Red Light, Green Light — Statue Game</p></header>
+<main>
+<section class="panel"><h2>Copy the statue</h2><img id="statue-photo" src="standing-woman.jpg" alt="Standing woman sculpture"><h3 id="statue-name">Standing Woman</h3><p id="statue-instruction">Stand upright and fold your arms across your body.</p><p class="note">Copy the statue and hold your pose briefly to earn points.</p></section>
+<section class="panel game"><div class="top"><span id="round-label">Statue 1 of 3</span><span>Score: <b id="score">0</b></span></div><div id="light-status">GREEN LIGHT</div><p id="light-instruction">Move into the pose.</p><div class="timer-box"><span class="timer-label">POSE TIMER</span><strong id="timer-countdown">5</strong><span id="timer-caption">seconds until red light</span></div><div id="canvas-holder"></div><div class="buttons"><button id="light-button">Red Light</button><button id="timer-button" class="plain">Start Auto Timer</button><button id="next-button" class="plain">Next Statue</button></div><p id="feedback">Loading pose detection. Please wait.</p></section>
+<section class="panel"><h2>Statues</h2><button class="choice selected" data-index="0"><img class="thumb" src="standing-woman.jpg" alt=""> 1. Standing Woman</button><button class="choice" data-index="1"><img class="thumb" src="thinker.jpg" alt=""> 2. The Thinker</button><button class="choice" data-index="2"><img class="thumb" src="discus-thrower.jpg" alt=""> 3. Discus Thrower</button><p class="note">The camera needs to see your shoulders and wrists. Roughly match the pose shown. Hold it briefly to earn 10 points and automatically move to the next statue.</p></section>
+</main><footer>Interaction Design Prototype · p5.js and ml5.js</footer><script src="sketch.js"></script></body></html>
